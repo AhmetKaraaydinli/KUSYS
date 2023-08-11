@@ -1,0 +1,62 @@
+﻿@model StudentReponse
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <body>
+
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Hoş Geldiniz</h4>
+                            <form asp-action="Update" asp-controller="Student" method="post">
+                                <input type="hidden"  asp-for="@Model.StudentId"/>
+                                <div class="form-group">
+                                    <label for="@Model.Email">Öğrenci Adı</label>
+                                    <input type="text" class="form-control" id="username" asp-for="@Model.Email" placeholder="Öğrenci adınızı Girin">
+                                    <span asp-validation-for="@Model.Email" class="text-danger"> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="@Model.Password">Şifre</label>
+                                    <input type="text" class="form-control" id="text" asp-for="@Model.Password" placeholder="Şifrenizi girin">
+                                    <span asp-validation-for="@Model.Password" class="text-danger"> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="@Model.BirthDate">Doğum Tarihi</label>
+                                    <input type="text" class="form-control" id="date" asp-for="@Model.BirthDate" placeholder="Doğum tarihini girin">
+                                    <span asp-validation-for="@Model.BirthDate" class="text-danger"> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="@Model.FirstName">FirstName</label>
+                                    <input type="text" class="form-control" id="date" asp-for="@Model.FirstName" placeholder="İsmini girin">
+                                    <span asp-validation-for="@Model.FirstName" class="text-danger"> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="@Model.LastName">LastName</label>
+                                    <input type="text" class="form-control" id="date" asp-for="@Model.LastName" placeholder="İsmini girin">
+                                    <span asp-validation-for="@Model.LastName" class="text-danger"> </span>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Add</button>
+                                <div asp-validation-summary="ModelOnly"> </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <style src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></style>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+@await Component.InvokeAsync("NToastNotify")
+</html>

@@ -1,0 +1,51 @@
+﻿@model LoginModel
+@{
+    Layout = null;
+}
+@{
+
+    <html>
+    <head>
+        <title>Giriş Yap </title>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    </head>
+    <body>
+
+     
+
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Hoş Geldiniz</h4>
+                            <form asp-action="Login" asp-controller="Authentication" method="post">
+
+                                <div class="form-group">
+                                    <label for="@Model.Email">Kullanıcı Adı</label>
+                                    <input type="text" class="form-control" id="username" asp-for="@Model.Email" placeholder="Kullanıcı adınızı girin">
+                                    <span asp-validation-for="@Model.Email" class="text-danger"> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="@Model.Password">Şifre</label>
+                                    <input type="password" class="form-control" id="password" asp-for="@Model.Password" placeholder="Şifrenizi girin">
+                                    <span asp-validation-for="@Model.Password" class="text-danger"> </span>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block" id="submitButton">Giriş Yap</button>
+                                <div asp-validation-summary="ModelOnly"> </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <style src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></style>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        @await Component.InvokeAsync("NToastNotify")
+    </html>
+}

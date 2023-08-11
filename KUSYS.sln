@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUSYS.WebApi", "KUSYS.WebApi\KUSYS.WebApi.csproj", "{9E95E722-70F8-4F6C-B7F4-95FC817C220A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUSYS.Front", "KUSYS.Front\KUSYS.Front.csproj", "{AB2510AB-3E9B-408C-93E9-64A47BF4DCF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E95E722-70F8-4F6C-B7F4-95FC817C220A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E95E722-70F8-4F6C-B7F4-95FC817C220A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E95E722-70F8-4F6C-B7F4-95FC817C220A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E95E722-70F8-4F6C-B7F4-95FC817C220A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2510AB-3E9B-408C-93E9-64A47BF4DCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2510AB-3E9B-408C-93E9-64A47BF4DCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2510AB-3E9B-408C-93E9-64A47BF4DCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2510AB-3E9B-408C-93E9-64A47BF4DCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A3E2E04-7BE5-42DF-8F9A-2B2EB904A839}
+	EndGlobalSection
+EndGlobal

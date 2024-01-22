@@ -20,5 +20,10 @@ namespace KUSYS.WebApi.Controller
         {
             return Ok(await _studentService.GetStudentsCourses(cancellationToken));
         }
+        [HttpGet("CourseStudents-test")]
+        public async Task<IActionResult> CourseStudentsTest(CancellationToken cancellationToken)
+        {
+            return Ok(await _studentService.GetStudentsCourses(cancellationToken));
+        }
     }
 }
